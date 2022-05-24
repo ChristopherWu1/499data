@@ -5,7 +5,7 @@
 -- Dumped from database version 14.2
 -- Dumped by pg_dump version 14.2
 
--- Started on 2022-05-23 00:37:34 EDT
+-- Started on 2022-05-24 17:11:32 EDT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,7 +19,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 3735 (class 1262 OID 16550)
+-- TOC entry 3755 (class 1262 OID 16550)
 -- Name: exercise_db; Type: DATABASE; Schema: -; Owner: christopherwu
 --
 
@@ -50,7 +50,7 @@ CREATE EXTENSION IF NOT EXISTS adminpack WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 3736 (class 0 OID 0)
+-- TOC entry 3756 (class 0 OID 0)
 -- Dependencies: 2
 -- Name: EXTENSION adminpack; Type: COMMENT; Schema: -; Owner: 
 --
@@ -564,6 +564,70 @@ CREATE TABLE public.five_day_template (
 ALTER TABLE public.five_day_template OWNER TO newuser;
 
 --
+-- TOC entry 245 (class 1259 OID 16753)
+-- Name: five_day_template_stretch; Type: TABLE; Schema: public; Owner: newuser
+--
+
+CREATE TABLE public.five_day_template_stretch (
+    "Day" integer,
+    "Target Muscle" text,
+    "Movement" text,
+    "Reps" integer,
+    "Sets" integer
+);
+
+
+ALTER TABLE public.five_day_template_stretch OWNER TO newuser;
+
+--
+-- TOC entry 244 (class 1259 OID 16748)
+-- Name: four_day_template_stretch; Type: TABLE; Schema: public; Owner: newuser
+--
+
+CREATE TABLE public.four_day_template_stretch (
+    "Day" integer,
+    "Target Muscle" text,
+    "Movement" text,
+    "Reps" integer,
+    "Sets" integer
+);
+
+
+ALTER TABLE public.four_day_template_stretch OWNER TO newuser;
+
+--
+-- TOC entry 242 (class 1259 OID 16738)
+-- Name: three_day_template; Type: TABLE; Schema: public; Owner: newuser
+--
+
+CREATE TABLE public.three_day_template (
+    "Day" integer,
+    "Target Muscle" text,
+    "Movement" text,
+    "Reps" integer,
+    "Sets" integer
+);
+
+
+ALTER TABLE public.three_day_template OWNER TO newuser;
+
+--
+-- TOC entry 243 (class 1259 OID 16743)
+-- Name: three_day_template_stretch; Type: TABLE; Schema: public; Owner: newuser
+--
+
+CREATE TABLE public.three_day_template_stretch (
+    "Day" integer,
+    "Target Muscle" text,
+    "Movement" text,
+    "Reps" integer,
+    "Sets" integer
+);
+
+
+ALTER TABLE public.three_day_template_stretch OWNER TO newuser;
+
+--
 -- TOC entry 239 (class 1259 OID 16721)
 -- Name: user_list; Type: TABLE; Schema: public; Owner: newuser
 --
@@ -582,7 +646,7 @@ CREATE TABLE public.user_list (
 ALTER TABLE public.user_list OWNER TO newuser;
 
 --
--- TOC entry 3698 (class 0 OID 16561)
+-- TOC entry 3714 (class 0 OID 16561)
 -- Dependencies: 210
 -- Data for Name: Advanced Athletic 3 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -590,7 +654,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3699 (class 0 OID 16566)
+-- TOC entry 3715 (class 0 OID 16566)
 -- Dependencies: 211
 -- Data for Name: Advanced Athletic 4 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -598,7 +662,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3700 (class 0 OID 16571)
+-- TOC entry 3716 (class 0 OID 16571)
 -- Dependencies: 212
 -- Data for Name: Advanced Athletic 5 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -606,7 +670,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3701 (class 0 OID 16576)
+-- TOC entry 3717 (class 0 OID 16576)
 -- Dependencies: 213
 -- Data for Name: Advanced Muscle 3 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -614,7 +678,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3702 (class 0 OID 16581)
+-- TOC entry 3718 (class 0 OID 16581)
 -- Dependencies: 214
 -- Data for Name: Advanced Muscle 4 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -622,7 +686,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3703 (class 0 OID 16586)
+-- TOC entry 3719 (class 0 OID 16586)
 -- Dependencies: 215
 -- Data for Name: Advanced Muscle 5 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -630,7 +694,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3704 (class 0 OID 16591)
+-- TOC entry 3720 (class 0 OID 16591)
 -- Dependencies: 216
 -- Data for Name: Advanced Strength 3 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -638,7 +702,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3705 (class 0 OID 16596)
+-- TOC entry 3721 (class 0 OID 16596)
 -- Dependencies: 217
 -- Data for Name: Advanced Strength 4 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -646,7 +710,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3706 (class 0 OID 16601)
+-- TOC entry 3722 (class 0 OID 16601)
 -- Dependencies: 218
 -- Data for Name: Advanced Strength 5 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -654,7 +718,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3707 (class 0 OID 16606)
+-- TOC entry 3723 (class 0 OID 16606)
 -- Dependencies: 219
 -- Data for Name: Beginner Athletic 3 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -662,7 +726,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3708 (class 0 OID 16611)
+-- TOC entry 3724 (class 0 OID 16611)
 -- Dependencies: 220
 -- Data for Name: Beginner Athletic 4 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -670,7 +734,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3709 (class 0 OID 16616)
+-- TOC entry 3725 (class 0 OID 16616)
 -- Dependencies: 221
 -- Data for Name: Beginner Athletic 5 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -678,7 +742,7 @@ ALTER TABLE public.user_list OWNER TO newuser;
 
 
 --
--- TOC entry 3710 (class 0 OID 16621)
+-- TOC entry 3726 (class 0 OID 16621)
 -- Dependencies: 222
 -- Data for Name: Beginner Muscle 3 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -702,7 +766,7 @@ INSERT INTO public."Beginner Muscle 3 Day" ("Day", "Exercise", "Sets", "Reps", "
 
 
 --
--- TOC entry 3711 (class 0 OID 16626)
+-- TOC entry 3727 (class 0 OID 16626)
 -- Dependencies: 223
 -- Data for Name: Beginner Muscle 4 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -710,7 +774,7 @@ INSERT INTO public."Beginner Muscle 3 Day" ("Day", "Exercise", "Sets", "Reps", "
 
 
 --
--- TOC entry 3712 (class 0 OID 16631)
+-- TOC entry 3728 (class 0 OID 16631)
 -- Dependencies: 224
 -- Data for Name: Beginner Muscle 5 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -718,7 +782,7 @@ INSERT INTO public."Beginner Muscle 3 Day" ("Day", "Exercise", "Sets", "Reps", "
 
 
 --
--- TOC entry 3713 (class 0 OID 16636)
+-- TOC entry 3729 (class 0 OID 16636)
 -- Dependencies: 225
 -- Data for Name: Beginner Strength 3 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -726,7 +790,7 @@ INSERT INTO public."Beginner Muscle 3 Day" ("Day", "Exercise", "Sets", "Reps", "
 
 
 --
--- TOC entry 3714 (class 0 OID 16641)
+-- TOC entry 3730 (class 0 OID 16641)
 -- Dependencies: 226
 -- Data for Name: Beginner Strength 4 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -734,7 +798,7 @@ INSERT INTO public."Beginner Muscle 3 Day" ("Day", "Exercise", "Sets", "Reps", "
 
 
 --
--- TOC entry 3715 (class 0 OID 16646)
+-- TOC entry 3731 (class 0 OID 16646)
 -- Dependencies: 227
 -- Data for Name: Beginner Strength 5 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -742,7 +806,7 @@ INSERT INTO public."Beginner Muscle 3 Day" ("Day", "Exercise", "Sets", "Reps", "
 
 
 --
--- TOC entry 3716 (class 0 OID 16651)
+-- TOC entry 3732 (class 0 OID 16651)
 -- Dependencies: 228
 -- Data for Name: Excercises; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -828,7 +892,7 @@ INSERT INTO public."Excercises" ("Name", "Target Area", "Target Muscle", "Exerci
 
 
 --
--- TOC entry 3728 (class 0 OID 16728)
+-- TOC entry 3744 (class 0 OID 16728)
 -- Dependencies: 240
 -- Data for Name: Four_Day_Template; Type: TABLE DATA; Schema: public; Owner: newuser
 --
@@ -852,7 +916,7 @@ INSERT INTO public."Four_Day_Template" ("Day", "Target Muscle", "Movement", "Set
 
 
 --
--- TOC entry 3717 (class 0 OID 16656)
+-- TOC entry 3733 (class 0 OID 16656)
 -- Dependencies: 229
 -- Data for Name: Intermediate Athletic 3 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -860,7 +924,7 @@ INSERT INTO public."Four_Day_Template" ("Day", "Target Muscle", "Movement", "Set
 
 
 --
--- TOC entry 3718 (class 0 OID 16661)
+-- TOC entry 3734 (class 0 OID 16661)
 -- Dependencies: 230
 -- Data for Name: Intermediate Athletic 4 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -868,7 +932,7 @@ INSERT INTO public."Four_Day_Template" ("Day", "Target Muscle", "Movement", "Set
 
 
 --
--- TOC entry 3719 (class 0 OID 16666)
+-- TOC entry 3735 (class 0 OID 16666)
 -- Dependencies: 231
 -- Data for Name: Intermediate Athletic 5 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -876,7 +940,7 @@ INSERT INTO public."Four_Day_Template" ("Day", "Target Muscle", "Movement", "Set
 
 
 --
--- TOC entry 3720 (class 0 OID 16671)
+-- TOC entry 3736 (class 0 OID 16671)
 -- Dependencies: 232
 -- Data for Name: Intermediate Muscle 3 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -884,7 +948,7 @@ INSERT INTO public."Four_Day_Template" ("Day", "Target Muscle", "Movement", "Set
 
 
 --
--- TOC entry 3721 (class 0 OID 16676)
+-- TOC entry 3737 (class 0 OID 16676)
 -- Dependencies: 233
 -- Data for Name: Intermediate Muscle 4 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -892,7 +956,7 @@ INSERT INTO public."Four_Day_Template" ("Day", "Target Muscle", "Movement", "Set
 
 
 --
--- TOC entry 3722 (class 0 OID 16681)
+-- TOC entry 3738 (class 0 OID 16681)
 -- Dependencies: 234
 -- Data for Name: Intermediate Muscle 5 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -900,7 +964,7 @@ INSERT INTO public."Four_Day_Template" ("Day", "Target Muscle", "Movement", "Set
 
 
 --
--- TOC entry 3723 (class 0 OID 16686)
+-- TOC entry 3739 (class 0 OID 16686)
 -- Dependencies: 235
 -- Data for Name: Intermediate Strength 3 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -908,7 +972,7 @@ INSERT INTO public."Four_Day_Template" ("Day", "Target Muscle", "Movement", "Set
 
 
 --
--- TOC entry 3724 (class 0 OID 16691)
+-- TOC entry 3740 (class 0 OID 16691)
 -- Dependencies: 236
 -- Data for Name: Intermediate Strength 4 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -916,7 +980,7 @@ INSERT INTO public."Four_Day_Template" ("Day", "Target Muscle", "Movement", "Set
 
 
 --
--- TOC entry 3725 (class 0 OID 16696)
+-- TOC entry 3741 (class 0 OID 16696)
 -- Dependencies: 237
 -- Data for Name: Intermediate Strength 5 Day; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -924,7 +988,7 @@ INSERT INTO public."Four_Day_Template" ("Day", "Target Muscle", "Movement", "Set
 
 
 --
--- TOC entry 3726 (class 0 OID 16716)
+-- TOC entry 3742 (class 0 OID 16716)
 -- Dependencies: 238
 -- Data for Name: User; Type: TABLE DATA; Schema: public; Owner: christopherwu
 --
@@ -946,7 +1010,7 @@ INSERT INTO public."User" ("User_Id", "Exercise", "Rating", "Set", "Reps", "Date
 
 
 --
--- TOC entry 3729 (class 0 OID 16733)
+-- TOC entry 3745 (class 0 OID 16733)
 -- Dependencies: 241
 -- Data for Name: five_day_template; Type: TABLE DATA; Schema: public; Owner: newuser
 --
@@ -979,7 +1043,99 @@ INSERT INTO public.five_day_template ("Day", "Target Muscle", "Movement", "Reps"
 
 
 --
--- TOC entry 3727 (class 0 OID 16721)
+-- TOC entry 3749 (class 0 OID 16753)
+-- Dependencies: 245
+-- Data for Name: five_day_template_stretch; Type: TABLE DATA; Schema: public; Owner: newuser
+--
+
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Abdominals', 'Pull', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Abdominals', 'Push', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Glutes', 'Stretch', 3, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Bicep', 'Pull', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Lower Back', 'Pull', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Lower Back', 'Stretch', 3, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Hamstrings', 'Stretch', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Quadriceps', 'Pull', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Quadriceps', 'Stretch', 3, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (4, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (4, 'Abdominals', 'Pull', 5, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (4, 'Abdominals', 'Push', 5, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (4, 'Glutes', 'Stretch', 5, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (5, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (5, 'Chest', 'Push', 5, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (5, 'Chest', 'Push', 5, 10);
+INSERT INTO public.five_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (5, 'Chest', 'Stretch', 5, 10);
+
+
+--
+-- TOC entry 3748 (class 0 OID 16748)
+-- Dependencies: 244
+-- Data for Name: four_day_template_stretch; Type: TABLE DATA; Schema: public; Owner: newuser
+--
+
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Abdominals', 'Pull', 4, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Abdominals', 'Push', 4, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Glutes', 'Stretch', 3, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Bicep', 'Pull', 4, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Lower Back', 'Pull', 4, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Lower Back', 'Stretch', 3, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Hamstrings', 'Stretch', 4, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Quadriceps', 'Pull', 4, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Quadriceps', 'Stretch', 3, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (4, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (4, 'Abdominals', 'Pull', 5, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (4, 'Abdominals', 'Push', 5, 10);
+INSERT INTO public.four_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (4, 'Glutes', 'Stretch', 5, 10);
+
+
+--
+-- TOC entry 3746 (class 0 OID 16738)
+-- Dependencies: 242
+-- Data for Name: three_day_template; Type: TABLE DATA; Schema: public; Owner: newuser
+--
+
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Lower Back', 'Push', 10, 4);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Upper Back', 'Pull', 10, 4);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Lower Back', 'Push', 10, 4);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Bicep', 'Push', 10, 3);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Tricep', 'Push', 10, 4);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Chest', 'Push', 10, 4);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Shoulders', 'Push', 10, 4);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Chest', 'Push', 10, 3);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Quadriceps', 'Push', 10, 4);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Hamstrings', 'Stretch', 10, 4);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Quadriceps', 'Pull', 10, 4);
+INSERT INTO public.three_day_template ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Quadriceps', 'Stretch', 10, 3);
+
+
+--
+-- TOC entry 3747 (class 0 OID 16743)
+-- Dependencies: 243
+-- Data for Name: three_day_template_stretch; Type: TABLE DATA; Schema: public; Owner: newuser
+--
+
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Abdominals', 'Pull', 4, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Abdominals', 'Push', 4, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (1, 'Glutes', 'Stretch', 3, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Bicep', 'Pull', 4, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Lower Back', 'Pull', 4, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (2, 'Lower Back', 'Stretch', 3, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Lungs', 'Aerobic', 4, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Hamstrings', 'Stretch', 4, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Quadriceps', 'Pull', 4, 10);
+INSERT INTO public.three_day_template_stretch ("Day", "Target Muscle", "Movement", "Reps", "Sets") VALUES (3, 'Quadriceps', 'Stretch', 3, 10);
+
+
+--
+-- TOC entry 3743 (class 0 OID 16721)
 -- Dependencies: 239
 -- Data for Name: user_list; Type: TABLE DATA; Schema: public; Owner: newuser
 --
@@ -991,14 +1147,14 @@ INSERT INTO public.user_list (user_id, username, password, exercise_category, di
 INSERT INTO public.user_list (user_id, username, password, exercise_category, difficulty, location, "Name") VALUES (7, 'party', 'quotes', NULL, NULL, NULL, 'Taylor');
 INSERT INTO public.user_list (user_id, username, password, exercise_category, difficulty, location, "Name") VALUES (8, 'solar', 'power', NULL, NULL, NULL, 'Sunny');
 INSERT INTO public.user_list (user_id, username, password, exercise_category, difficulty, location, "Name") VALUES (4, 'hello', 'mate', 'Strength', 'Advanced', 'Both', 'Francis');
-INSERT INTO public.user_list (user_id, username, password, exercise_category, difficulty, location, "Name") VALUES (3, 'bruh', 'phone', 'Strength', 'Advanced', 'Both', 'John');
 INSERT INTO public.user_list (user_id, username, password, exercise_category, difficulty, location, "Name") VALUES (9, 'bigboi', 'cenasucks', 'Strength', 'Intermediate', 'Both', 'Brock');
 INSERT INTO public.user_list (user_id, username, password, exercise_category, difficulty, location, "Name") VALUES (10, 'bigboi', 'johncenasucks', 'Strength', 'Advanced', 'Gym', 'Brock');
 INSERT INTO public.user_list (user_id, username, password, exercise_category, difficulty, location, "Name") VALUES (11, 'woobat', 'pokemon', 'Aerobic', 'Intermediate', 'Home', 'Ash');
+INSERT INTO public.user_list (user_id, username, password, exercise_category, difficulty, location, "Name") VALUES (3, 'bruh', 'phone', 'Flexibility', 'Intermediate', 'Gym', 'John');
 
 
 --
--- TOC entry 3556 (class 2606 OID 16707)
+-- TOC entry 3572 (class 2606 OID 16707)
 -- Name: Excercises Excercises_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1007,7 +1163,7 @@ ALTER TABLE ONLY public."Excercises"
 
 
 --
--- TOC entry 3558 (class 2606 OID 16727)
+-- TOC entry 3574 (class 2606 OID 16727)
 -- Name: user_list user_list_pkey; Type: CONSTRAINT; Schema: public; Owner: newuser
 --
 
@@ -1015,7 +1171,7 @@ ALTER TABLE ONLY public.user_list
     ADD CONSTRAINT user_list_pkey PRIMARY KEY (user_id);
 
 
--- Completed on 2022-05-23 00:37:34 EDT
+-- Completed on 2022-05-24 17:11:32 EDT
 
 --
 -- PostgreSQL database dump complete
